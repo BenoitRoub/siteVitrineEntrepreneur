@@ -41,6 +41,11 @@ export default function DemandeDevis() {
 		setDevis(!devis);
 	}
 
+	function closeDevis() {
+		setDevis(!devis);
+		setPrix(0);
+	}
+
 	function handleSubmit(e) {
 		e.preventDefault();
 		setPrix(prix + tonte * 2 + haie * 12 + gazon * 8 + synthé * 25);
@@ -145,6 +150,7 @@ export default function DemandeDevis() {
 								label="m2"
 								type="number"
 								fullWidth
+								onChange={handleNumberChange("gazon")}
 							/>
 						) : null}
 						<FormControlLabel
@@ -164,6 +170,7 @@ export default function DemandeDevis() {
 								label="m2"
 								type="number"
 								fullWidth
+								onChange={handleNumberChange("synthé")}
 							/>
 						) : null}
 					</FormGroup>
@@ -209,7 +216,7 @@ export default function DemandeDevis() {
 						style={{
 							margin: "10px"
 						}}
-						onClick={dispatchDevis}
+						onClick={closeDevis}
 					>
 						Retour
 					</Button>

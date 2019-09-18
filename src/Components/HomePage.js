@@ -3,6 +3,7 @@ import background from ".././Image/bannerBackground.jpg";
 import { makeStyles } from "@material-ui/styles";
 import Container from "@material-ui/core/Container";
 import AppBar from ".././GlobalComponents/AppBar";
+import DemandeDevis from "./DemandeDevis";
 import LogoBlanc from ".././Image/logoBlanc.png";
 import LogoBlancTest from ".././Image/logo.png";
 import Fab from "@material-ui/core/Fab";
@@ -168,7 +169,9 @@ export default function HomePage() {
 								demande de devis gratuit
 							</span>
 						</p>
-						<Fab variant="extended">Demander un devis</Fab>
+						<Fab variant="extended">
+							<DemandeDevis />
+						</Fab>
 					</Container>
 				</div>
 				<div
